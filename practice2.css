@@ -1,0 +1,56 @@
+.progress-size{
+  padding-left: 10%;
+  padding-right: 10%;
+  float:left;
+  width: 100%;
+}
+.checklist{
+  text-align: center;
+}
+.checknum{
+  float:left;
+  width:30px;
+  height: 30px;
+}
+
+.table{
+  float:left;
+  both
+}
+
+.tabledelete{
+  height: 51px;
+  width:41px;
+  float:right;
+  background-color: #cf514d;
+  color: white;
+  opacity: 0.9;
+}
+
+
+.mdl-button--fab.mdl-button--colored{
+  background: rgb(3,169,244);
+}
+
+.recordmonitor{
+  background-color: #3F51B5;
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  top: 25%;
+  left: 40%;
+
+}
+.recordmonitor > .mdl-card__title > .mdl-card__title-text{
+  color: #fff;
+}
+.recordmonitor > .mdl-card__supporting-text{
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: #E3F2FD;
+}
+.recordmonitor > .mdl-button{
+  margin-top: 10px;
+  background-color: #E3F2FD;
+}
