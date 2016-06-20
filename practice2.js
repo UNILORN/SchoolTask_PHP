@@ -19,6 +19,7 @@ function record()
     recognition.start();
 }
 
+
 clickcheck = function(){
 
   var list = $(".checknum").length;

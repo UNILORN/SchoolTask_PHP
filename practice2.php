@@ -14,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="practice2.css" charset="utf-8">
     <script src="practice2.js"></script>
+
   </head>
 
   <body>
@@ -64,7 +65,7 @@
           <h2 class="mdl-card__title-text">Record OK?</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          <input class="mdl-textfield__input record_text listname" name="listname">
+          <input type="text" class="mdl-textfield__input record_text listname">
         </div>
         <button onclick="fadefade()" type="submit" name="name" value="AssList" class="mdl-button mdl-js-button mdl-button--raised" id="addbutton">
           OK
