@@ -18,10 +18,9 @@
       $dns = "mysql:host=127.0.0.1;dbname=php;charset=utf8";
       $pdo = new PDO($dns,"root","shr850");
 
-      $sql = "insert into php_test(name,created_at,updated_at) values('$data',now(),now());";
+      $sql = "insert into php_test(name,created_at,updated_at) values('".mb_convert_encoding($data,'UTF-8')."',now(),now());";
       $stmh = $pdo -> prepare($sql);
       $stmh->execute();
-
   }
 
   function delete_sql($data){
