@@ -38,4 +38,14 @@
       $stmh->execute();
 
   }
+  function edit_sql($data,$id){
+
+    $dns = "mysql:host=127.0.0.1;dbname=php;charset=utf8";
+    $pdo = new PDO($dns,"root","shr850");
+
+    $sql = "update php_test set name = '".$data."' where id = ".$id." ;";
+    $stmh = $pdo -> prepare($sql);
+
+    $stmh->execute();
+  }
  ?>

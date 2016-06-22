@@ -1,3 +1,20 @@
+
+$(function(){
+  $(".change_button").find("a").click(function(){
+    $(this).hide();
+    $(this).next(".mdl-textfield").show();
+  });
+  $(window).click(function(){
+    cssdata = $(".change_button").find("button").css("display");
+    if(cssdata == "none"){
+      $(this).find(".change_button").next("button").show();
+      $(this).find(".change_button").next(".mdl-textfield").hide();
+    }
+  });
+});
+
+
+
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 var recognition = new webkitSpeechRecognition();
 recognition.lang = 'ja';
