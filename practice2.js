@@ -15,9 +15,32 @@ recognition.lang = 'ja';
 // 録音終了時トリガー
 recognition.addEventListener('result', function(event){
     var text = event.results.item(0).item(0).transcript;
-    $(".recordmonitor").fadeIn();
     $(".record_text").val(text);
-    $(".listname").val(text);
+    if (text=="消して"){
+      $(".checklist").submit();
+    }
+    if(text =="全部チェックして"){
+      var list = $(".checknum").length;
+      $(".mdl-checkbox").addClass("is-checked");
+      for(var i = 0;i<list;i++){
+        var yoso = '[name = "btn['+i+']"]';
+        $('[name = "btn['+i+']"]').prop('checked',true);
+        clickcheck();
+      }
+    }
+    else if(text =="全部チェック外して"){
+      var list = $(".checknum").length;
+      $(".mdl-checkbox").removeClass("is-checked");
+      for(var i = 0;i<list;i++){
+        var yoso = '[name = "btn['+i+']"]';
+        $('[name = "btn['+i+']"]').prop('checked',false);
+        clickcheck();
+      }
+    }
+    else{
+      $(".recordmonitor").fadeIn();
+      $(".listname").val(text);
+    }
 }, false);
 
 function fadefade(){

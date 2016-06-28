@@ -1,11 +1,5 @@
 <?php
 
-        if (!empty($_POST["recodename"])){
-          write_sql($_POST["recodename"]);
-        }
-        if (!empty( $_POST["listname"])){
-          write_sql($_POST["listname"]);
-        }
 
 
           // if (!isset( $_SESSION["list"])){

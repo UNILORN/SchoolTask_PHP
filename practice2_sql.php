@@ -1,4 +1,17 @@
 <?php
+
+  if (!empty($_POST["recodename"])){
+    if ( $_POST["recodename"] == "消して"){
+      $_POST["delete"] = "DeleteList";
+    }
+    else {
+      write_sql($_POST["recodename"]);
+    }
+  }
+  if (!empty( $_POST["listname"])){
+    write_sql($_POST["listname"]);
+  }
+
   //
   // 初期値誤動作防止
   //
@@ -55,7 +68,7 @@
     $stmh = $pdo -> prepare($sql);
     $stmh->execute();
     $count = $stmh->rowCount();
-    $del = []; 
+    $del = [];
     $darr = $_POST["btn"];  // チェックボックス用変数
     for($i = 0;$i < $count;$i++){
       $datalist = ($stmh->fetch(PDO::FETCH_ASSOC));

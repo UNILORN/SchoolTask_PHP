@@ -68,6 +68,9 @@
         <div class="mdl-card__supporting-text">
           <input type="text" class="mdl-textfield__input record_text" name="recodename">
         </div>
+        <button onclick="fadefade()" type="button" name="name" value="AssList" class="mdl-button mdl-js-button mdl-button--raised" id="addbutton">
+          Close
+        </button>
         <button onclick="fadefade()" type="submit" name="name" value="AssList" class="mdl-button mdl-js-button mdl-button--raised" id="addbutton">
           OK
         </button>
