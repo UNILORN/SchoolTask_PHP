@@ -66,7 +66,7 @@
           <h2 class="mdl-card__title-text">Record OK?</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          <input type="text" class="mdl-textfield__input record_text listname">
+          <input type="text" class="mdl-textfield__input record_text" name="recodename">
         </div>
         <button onclick="fadefade()" type="submit" name="name" value="AssList" class="mdl-button mdl-js-button mdl-button--raised" id="addbutton">
           OK
@@ -85,6 +85,7 @@
       </tr>
 
       <?php
+        require __DIR__."/practice2_function.php";
         require __DIR__."/practice2_2.php";
         require __DIR__."/practice2_sql.php";
        ?>

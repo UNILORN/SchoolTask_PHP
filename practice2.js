@@ -4,13 +4,6 @@ $(function(){
     $(this).hide();
     $(this).next(".mdl-textfield").show();
   });
-  $(window).click(function(){
-    cssdata = $(".change_button").find("button").css("display");
-    if(cssdata == "none"){
-      $(this).find(".change_button").next("button").show();
-      $(this).find(".change_button").next(".mdl-textfield").hide();
-    }
-  });
 });
 
 
@@ -24,9 +17,12 @@ recognition.addEventListener('result', function(event){
     var text = event.results.item(0).item(0).transcript;
     $(".recordmonitor").fadeIn();
     $(".record_text").val(text);
+    $(".listname").val(text);
 }, false);
 
 function fadefade(){
+  var text = $(".record_text").val();
+  $(".listname").val(text);
   $(".recordmonitor").fadeOut();
 }
 

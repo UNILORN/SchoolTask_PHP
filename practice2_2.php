@@ -1,6 +1,8 @@
 <?php
-  require __DIR__."/practice2_function.php";
 
+        if (!empty($_POST["recodename"])){
+          write_sql($_POST["recodename"]);
+        }
         if (!empty( $_POST["listname"])){
           write_sql($_POST["listname"]);
         }
