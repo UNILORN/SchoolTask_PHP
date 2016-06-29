@@ -6,14 +6,6 @@
     }
   }
 
-
-  function file_read(){
-    $data = file_get_contents(__DIR__."/practice2.json");
-    $list = json_decode($data,true);
-    return $list;
-  }
-
-
   function write_sql($data){
       $dns = "mysql:host=127.0.0.1;dbname=php;charset=utf8";
       $pdo = new PDO($dns,"root","shr850");

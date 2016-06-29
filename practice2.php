@@ -89,7 +89,6 @@
 
       <?php
         require __DIR__."/practice2_function.php";
-        require __DIR__."/practice2_2.php";
         require __DIR__."/practice2_sql.php";
        ?>
      </form>
@@ -97,7 +96,6 @@
 
     <?php
       require __DIR__."/practice2_pager.php";
-      require __DIR__."/practice2_3.php";
      ?>
   </body>
 </html>

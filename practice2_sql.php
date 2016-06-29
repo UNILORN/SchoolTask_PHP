@@ -8,8 +8,11 @@
       write_sql($_POST["recodename"]);
     }
   }
-  if (!empty( $_POST["listname"])){
+  else if (!empty( $_POST["listname"])){
     write_sql($_POST["listname"]);
+  }
+  else {
+
   }
 
   //

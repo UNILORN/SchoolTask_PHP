@@ -19,7 +19,7 @@ recognition.addEventListener('result', function(event){
     if (text=="消して"){
       $(".checklist").submit();
     }
-    if(text =="全部チェックして"){
+    else if(text =="全部チェックして"){
       var list = $(".checknum").length;
       $(".mdl-checkbox").addClass("is-checked");
       for(var i = 0;i<list;i++){
