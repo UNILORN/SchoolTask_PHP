@@ -39,4 +39,15 @@
 
     $stmh->execute();
   }
+
+  function alldelete_sql(){
+
+    $dns = "mysql:host=127.0.0.1;dbname=php;charset=utf8";
+    $pdo = new PDO($dns,"root","shr850");
+
+    $sql = "truncate table php_test;";
+    $stmh = $pdo -> prepare($sql);
+
+    $stmh->execute();
+  }
  ?>

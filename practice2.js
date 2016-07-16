@@ -19,6 +19,9 @@ recognition.addEventListener('result', function(event){
     if (text=="消して"){
       $(".checklist").submit();
     }
+    else if(text=="全部消して"){
+      $(".checklist").submit();
+    }
     else if(text =="全部チェックして"){
       var list = $(".checknum").length;
       $(".mdl-checkbox").addClass("is-checked");
@@ -75,4 +78,26 @@ clickcheck = function(){
   else{
     $(".progress-bar-success").css("background-color","#5cb85c");
   };
+}
+
+function allcheckclick(){
+
+    if($(".allcheck_l").hasClass("is-checked")){
+      var list = $(".checknum").length;
+      $(".mdl-checkbox").removeClass("is-checked");
+      for(var i = 0;i<list;i++){
+        var yoso = '[name = "btn['+i+']"]';
+        $('[name = "btn['+i+']"]').prop('checked',false);
+        clickcheck();
+      }
+    }
+    else{
+      var list = $(".checknum").length;
+      $(".mdl-checkbox").addClass("is-checked");
+      for(var i = 0;i<list;i++){
+        var yoso = '[name = "btn['+i+']"]';
+        $('[name = "btn['+i+']"]').prop('checked',true);
+        clickcheck();
+      }
+    }
 }

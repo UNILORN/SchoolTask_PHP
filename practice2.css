@@ -56,5 +56,10 @@
   background-color: #E3F2FD;
 }
 .change_button > .mdl-textfield{
-  
+
+}
+.allcheck{
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
 }

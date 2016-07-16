@@ -47,6 +47,11 @@
     </div>
 
     <form class="checklist" method="post">
+      <div class="allcheck">
+        <label class="allcheck_l mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+          <input type="checkbox" class="mdl-checkbox__input allcheck_i" onclick="allcheckclick()" value=""/>
+        </label>
+      </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input listname" type="text" id="sample3" name="listname">
         <label class="mdl-textfield__label">Add...</label>

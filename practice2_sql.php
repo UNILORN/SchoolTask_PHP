@@ -4,7 +4,10 @@
     if ( $_POST["recodename"] == "消して"){
       $_POST["delete"] = "DeleteList";
     }
-    else {
+    else if($_POST["recodename"] == "全部消して"){
+      alldelete_sql();
+    }
+    else{
       write_sql($_POST["recodename"]);
     }
   }
