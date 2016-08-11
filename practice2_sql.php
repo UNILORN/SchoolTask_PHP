@@ -45,7 +45,7 @@
   $offset = ($page - 1)* 10;
 
   $dns = "mysql:host=127.0.0.1;dbname=php;charset=utf8";
-  $pdo = new PDO($dns,"root","shr850");
+  $pdo = new PDO($dns,"testuser","");
 
 
   $sql = "select id from php_test limit 10 offset $offset";
